@@ -59,21 +59,30 @@ namespace _01Basic
         private void led01On_Click(object sender, EventArgs e)
         {
             Console.WriteLine("LED01_ON Clicked!");
+            this.textArea.Text = "";
+            this.textArea.AppendText("LED01_ON SUCCESS" + "\r\n");
+
         }
 
         private void led02On_Click(object sender, EventArgs e)
         {
             Console.WriteLine("LED02_ON Clicked!");
+            this.textArea.Text = "";
+            this.textArea.AppendText("LED02_ON SUCCESS" + "\r\n");
         }
 
         private void led01Off_Click(object sender, EventArgs e)
         {
             Console.WriteLine("LED01_OFF Clicked!");
+            this.textArea.Text = "";
+            this.textArea.AppendText("LED01_OFF SUCCESS" + "\r\n");
         }
 
         private void led02Off_Click(object sender, EventArgs e)
         {
             Console.WriteLine("LED02_OFF Clicked!");
+            this.textArea.Text = "";
+            this.textArea.AppendText("LED02_OFF SUCCESS" + "\r\n");
         }
     }
 }
