@@ -48,10 +48,10 @@ namespace _01Basic
                 this.seiralPort.StopBits = System.IO.Ports.StopBits.One;
                 this.seiralPort.Parity = System.IO.Ports.Parity.None;
                 this.seiralPort.Open();
-                Console.WriteLine("CONNECTION SUCCESS");
+                Console.WriteLine(this.PortNumber.Items[this.PortNumber.SelectedIndex].ToString() + " CONNECTION SUCCESS");
                 this.seiralPort.DataReceived += new SerialDataReceivedEventHandler(SerialPort_DataRecv);
             } catch(Exception ex) {
-                Console.WriteLine(ex);
+                Console.WriteLine(this.PortNumber.Items[this.PortNumber.SelectedIndex].ToString() + " CONNECTION FAIL");
                 this.seiralPort.Close();
             }
         }
