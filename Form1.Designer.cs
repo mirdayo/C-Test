@@ -49,7 +49,10 @@
             "COM4",
             "COM5",
             "COM6",
-            "COM7"});
+            "COM7",
+            "COM8",
+            "COM9",
+            "COM10"});
             this.PortNumber.Location = new System.Drawing.Point(27, 33);
             this.PortNumber.Name = "PortNumber";
             this.PortNumber.Size = new System.Drawing.Size(136, 23);
@@ -128,7 +131,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(309, 281);
+            this.ClientSize = new System.Drawing.Size(309, 285);
             this.Controls.Add(this.msgBox);
             this.Controls.Add(this.textArea);
             this.Controls.Add(this.led01Off);

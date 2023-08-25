@@ -59,30 +59,69 @@ namespace _01Basic
         private void led01On_Click(object sender, EventArgs e)
         {
             Console.WriteLine("LED01_ON Clicked!");
-            this.textArea.Text = "";
-            this.textArea.AppendText("LED01_ON SUCCESS" + "\r\n");
-
+            if (seiralPort.IsOpen)
+            {
+                seiralPort.Write("0");
+                this.textArea.Text = "";
+                this.textArea.AppendText("LED01_ON SUCCESS" + "\r\n");
+            }
+            else 
+            {
+                Console.WriteLine("포트가 열리지 않았습니다.");
+                this.textArea.Text = "";
+                this.textArea.AppendText("LED01_ON FAIL" + "\r\n");
+            }
         }
 
         private void led02On_Click(object sender, EventArgs e)
         {
             Console.WriteLine("LED02_ON Clicked!");
-            this.textArea.Text = "";
-            this.textArea.AppendText("LED02_ON SUCCESS" + "\r\n");
+            if (seiralPort.IsOpen)
+            {
+                seiralPort.Write("2");
+                this.textArea.Text = "";
+                this.textArea.AppendText("LED02_ON SUCCESS" + "\r\n");
+            }
+            else
+            {
+                Console.WriteLine("포트가 열리지 않았습니다.");
+                this.textArea.Text = "";
+                this.textArea.AppendText("LED02_ON FAIL" + "\r\n");
+            }
         }
 
         private void led01Off_Click(object sender, EventArgs e)
         {
             Console.WriteLine("LED01_OFF Clicked!");
-            this.textArea.Text = "";
-            this.textArea.AppendText("LED01_OFF SUCCESS" + "\r\n");
+            if (seiralPort.IsOpen)
+            {
+                seiralPort.Write("1");
+                this.textArea.Text = "";
+                this.textArea.AppendText("LED01_OFF SUCCESS" + "\r\n");
+            }
+            else
+            {
+                Console.WriteLine("포트가 열리지 않았습니다.");
+                this.textArea.Text = "";
+                this.textArea.AppendText("LED01_OFF FAIL" + "\r\n");
+            }
         }
 
         private void led02Off_Click(object sender, EventArgs e)
         {
             Console.WriteLine("LED02_OFF Clicked!");
-            this.textArea.Text = "";
-            this.textArea.AppendText("LED02_OFF SUCCESS" + "\r\n");
+            if (seiralPort.IsOpen)
+            {
+                seiralPort.Write("3");
+                this.textArea.Text = "";
+                this.textArea.AppendText("LED02_OFF SUCCESS" + "\r\n");
+            }
+            else
+            {
+                Console.WriteLine("포트가 열리지 않았습니다.");
+                this.textArea.Text = "";
+                this.textArea.AppendText("LED02_OFF FAIL" + "\r\n");
+            }
         }
     }
 }
